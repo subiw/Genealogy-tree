@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogical Tree</title>
+    <style>
+        /* Общие стили для генеалогического дерева */
+        .tree {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        ul {
+            position: relative;
+            padding-top: 20px;
+            list-style-type: none;
+        }
+        ul ul {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 1px solid #ccc;
+        }
+        li {
+            position: relative;
+            padding: 10px 5px;
+            cursor: pointer;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 20px;
+            height: 1px;
+            border-top: 1px solid #ccc;
+        }
+        li::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            height: 100%;
+            width: 1px;
+            border-left: 1px solid #ccc;
+        }
+        li:last-child::after {
+            height: 10px;
+        }
+        .toggle::before {
+            content: '▶';
+            font-size: 12px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .toggle.active::before {
+            content: '▼';
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <ul>
+            <li class="toggle">Сейитказы Моңол
+                <ul>
+                    <li class="toggle">Бердике
+                        <ul>
+                            <li class="toggle">Ороз
+                                <ul>
+                                    <li class="toggle">Кошбай
+                                        <ul>
+                                            <li class="toggle">Жунайт
+                                                <ul>
+                                                    <li class="toggle">Абибилла
+                                                        <ul>
+                                                            <li>Аскарбек</li>
+                                                            <li>Акгуль</li>
+                                                            <li>Гулшайыр</li>
+                                                            <li>Тимур</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Жуманалы
+                                                        <ul>
+                                                            <li>Ысмайыл</li>
+                                                            <li>Ысакалы</li>
+                                                            <li>Курбаналы</li>
+                                                            <li>Жумасия</li>
+                                                            <li>Жумагуль</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Шарбан
+                                                        <ul>
+                                                            <li>Султан</li>
+                                                            <li>Аиша</li>
+                                                            <li>Зульфия</li>
+                                                            <li>Адыл</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Салан
+                                                        <ul>
+                                                            <li>Салима</li>
+                                                            <li>Гульшат</li>
+                                                            <li>Гулсара</li>
+                                                            <li>Буниса</li>
+                                                            <li>Улун</li>
+                                                            <li>Бурул</li>
+                                                            <li>Умсун</li>
+                                                            <li>Дилбар</li>
+                                                            <li>Абдурасул</li>
+                                                            <li>Абдырейим</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Меерман
+                                                        <ul>
+                                                            <li>Талантбек</li>
+                                                            <li>Саматбек</li>
+                                                            <li>Максатбек</li>
+                                                            <li>Сыдыкбек</li>
+                                                            <li>Айнагуль</li>
+                                                            <li>Канышай</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Парпыгуль
+                                                        <ul>
+                                                            <li>Суйоркул</li>
+                                                            <li>Сардар</li>
+                                                            <li>Залкар</li>
+                                                            <li>Каныкей</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="toggle">Мансур
+                                                <ul>
+                                                    <li class="toggle">Мухтар
+                                                        <ul>
+                                                            <li>Орозалы</li>
+                                                            <li>Сагын</li>
+                                                            <li>Нуралы</li>
+                                                            <li>Азимали</li>
+                                                            <li>Зейнеп</li>
+                                                            <li>Жумакан</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Акбарали
+                                                        <ul>
+                                                            <li>Алтынбек</li>
+                                                            <li>Ильясбек</li>
+                                                            <li>Зинагуль</li>
+                                                            <li>Иманалы</li>
+                                                            <li>Субаналы</li>
+                                                            <li>Жийдегул</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Мавлюда
+                                                        <ul>
+                                                            <li>Махабат</li>
+                                                            <li>Ирсалат</li>
+                                                            <li>Сабира</li>
+                                                            <li>Нургуль</li>
+                                                            <li>Улан</li>
+                                                            <li>Нурлан</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="toggle">Бүбүайна
+                                                        <ul>
+                                                            <li>Венера</li>
+                                                            <li>Байдук</li>
+                                                            <li>Ибарат</li>
+                                                            <li>Сырга</li>
+                                                            <li>Жумагуль</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Код JavaScript для добавления функции сворачивания/разворачивания
+        document.querySelectorAll('.toggle').forEach(function (element) {
+            element.addEventListener('click', function (event) {
+                event.stopPropagation();
+                this.classList.toggle('active');
+                const childrenContainer = this.querySelector('ul');
+                if (childrenContainer) {
+                    childrenContainer.style.display = childrenContainer.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+
+            // Изначально скрываем все дочерние элементы
+            const childrenContainer = element.querySelector('ul');
+            if (childrenContainer) {
+                childrenContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
